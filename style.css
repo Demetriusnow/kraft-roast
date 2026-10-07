@@ -1516,7 +1516,7 @@ ul, ol {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1.6fr 1fr 1.4fr;
   gap: var(--space-3xl);
   margin-bottom: var(--space-3xl);
 }
