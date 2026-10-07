@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гайди заварювання &amp; Калькулятор пропорцій — KRAFT / ROAST</title>
+  <meta name="description" content="Інтерактивний калькулятор співвідношення кави та води (Brew Ratio) під V60, AeroPress, Chemex, French Press. Покрокові гайди правильного приготування від KRAFT / ROAST.">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data: Schema.org HowTo for Coffee Brewing Methods -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HowTo",
+        "name": "Як заварити каву в пуровері Hario V60",
+        "description": "Покроковий рецепт заварювання фільтр-кави у Hario V60 від обсмажувальні KRAFT / ROAST.",
+        "totalTime": "PT3M",
+        "tool": [
+          { "@type": "HowToTool", "name": "Hario V60 дріпер" },
+          { "@type": "HowToTool", "name": "Паперовий фільтр 02" },
+          { "@type": "HowToTool", "name": "Електронні ваги з таймером" },
+          { "@type": "HowToTool", "name": "Чайник з гусячим носиком" }
+        ],
+        "supply": [
+          { "@type": "HowToSupply", "name": "15 г свіжомеленої спешелті-кави" },
+          { "@type": "HowToSupply", "name": "240 мл гарячої води (93°C)" }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Підготовка фільтра",
+            "text": "Промийте паперовий фільтр гарячою водою, щоб прибрати присмак целюлози, та злийте воду."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Блумінг (дегазація)",
+            "text": "Зробіть блумінг 45 г води на 40 секунд, обережно перемішавши кавову таблетку ложкою."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Основні проливи",
+            "text": "Влийте залишок води у два рівних інтервали до 240 мл концентричними колами від центру до країв."
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "Як приготувати каву в AeroPress",
+        "description": "Інвертний метод приготування збалансованого концентрату в AeroPress.",
+        "totalTime": "PT2M",
+        "tool": [
+          { "@type": "HowToTool", "name": "AeroPress" },
+          { "@type": "HowToTool", "name": "Паперовий або металевий фільтр" },
+          { "@type": "HowToTool", "name": "Ваги" }
+        ],
+        "supply": [
+          { "@type": "HowToSupply", "name": "16 г кави тонко-середнього помелу" },
+          { "@type": "HowToSupply", "name": "200 мл води (88°C)" }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Інвертна позиція",
+            "text": "Встановіть AeroPress у перевернуте положення та засипте 16 г змеленої кави."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Заливання та перемішування",
+            "text": "Залийте всю воду (200 мл) за 15 секунд і перемішайте 3 рази лопаткою."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Продавлювання",
+            "text": "Закрутіть кришку з промитим фільтром, переверніть на чашку і плавно продавлюйте поршень 30 секунд."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Перейти до основного вмісту</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="KRAFT / ROAST Головна">
+        KRAFT <span class="slash">/</span> ROAST
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Головна навігація">
+        <a href="index.html" class="nav-link">Головна</a>
+        <a href="beans.html" class="nav-link">Каталог зерна</a>
+        <a href="brew-guide.html" class="nav-link active" aria-current="page">Гайди заварювання</a>
+      </nav>
+
+      <!-- Action & Mobile Burger Button -->
+      <div class="header-actions">
+        <a href="beans.html" class="btn btn-outline btn-sm">Каталог</a>
+        <button type="button" class="burger-btn" aria-label="Відкрити навігаційне меню" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay & Drawer -->
+  <div class="mobile-overlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobile-nav" aria-label="Мобільне меню навігації">
+    <div>
+      <div class="brand-logo" style="margin-bottom: var(--space-2xl);">
+        KRAFT <span class="slash">/</span> ROAST
+      </div>
+      <nav class="mobile-nav-list" aria-label="Мобільна навігація">
+        <a href="index.html" class="mobile-nav-link">Головна</a>
+        <a href="beans.html" class="mobile-nav-link">Каталог зерна</a>
+        <a href="brew-guide.html" class="mobile-nav-link active" aria-current="page">Гайди заварювання</a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-footer">
+      <p style="font-weight: var(--fw-medium); color: var(--text-primary); margin-bottom: 4px;">Обсмажувальня &amp; Кав'ярня</p>
+      <p>Київ, вул. Саксаганського, 42</p>
+      <p>Щодня: 08:00 – 20:00</p>
+    </div>
+  </aside>
+
+  <!-- Main Content Landmark -->
+  <main class="site-main" id="main-content" tabindex="-1">
+
+    <!-- Hero Introduction -->
+    <section class="section section--sm" aria-labelledby="guide-hero-title" style="border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">Мистецтво екстракції</span>
+          <h1 id="guide-hero-title" class="section-title">Гайди заварювання &amp; Калькулятор пропорцій</h1>
+          <p class="section-desc">
+            Смак свіжообсмаженої кави розкривається на стику математичної точності та якісної води. 
+            Оберіть свій улюблений девайс та розрахуйте грамаж і графік проливу з точністю до грама.
+          </p>
+        </header>
+
+        <div class="guide-hero-media">
+          <img src="images/brew-gear.jpg" alt="Процес приготування кави у пуровері V60 з вагами та чайником у KRAFT / ROAST" loading="eager" width="1280" height="720">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Interactive Brew Ratio Calculator (CSS Grid with grid-template-areas) -->
+    <section class="section" aria-labelledby="calc-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">Інтерактивний інструмент</span>
+          <h2 id="calc-heading" class="section-title">Brew Ratio Calculator</h2>
+          <p class="section-desc">Динамічний розрахунок води, часу, температури та рецепту проливу під обраний девайс.</p>
+        </header>
+
+        <div class="calculator-section">
+          <div class="calc-grid-layout">
+            
+            <!-- Area 1: Calculator Controls -->
+            <div class="calc-area-controls">
+              
+              <!-- Device Selector -->
+              <div class="calc-field-group">
+                <span class="calc-label" id="device-picker-label">1. Оберіть метод приготування:</span>
+                <div class="device-picker-grid" role="radiogroup" aria-labelledby="device-picker-label">
+                  
+                  <label class="device-radio-label is-selected" for="device-v60">
+                    <input type="radio" id="device-v60" name="brew-device" value="v60" checked>
+                    <span class="device-icon" aria-hidden="true">☕</span>
+                    <span class="device-name">Hario V60</span>
+                    <span class="device-ratio-tag">1:16</span>
+                  </label>
+
+                  <label class="device-radio-label" for="device-aeropress">
+                    <input type="radio" id="device-aeropress" name="brew-device" value="aeropress">
+                    <span class="device-icon" aria-hidden="true">🧪</span>
+                    <span class="device-name">AeroPress</span>
+                    <span class="device-ratio-tag">1:12</span>
+                  </label>
+
+                  <label class="device-radio-label" for="device-chemex">
+                    <input type="radio" id="device-chemex" name="brew-device" value="chemex">
+                    <span class="device-icon" aria-hidden="true">🏺</span>
+                    <span class="device-name">Chemex</span>
+                    <span class="device-ratio-tag">1:16.6</span>
+                  </label>
+
+                  <label class="device-radio-label" for="device-frenchpress">
+                    <input type="radio" id="device-frenchpress" name="brew-device" value="frenchpress">
+                    <span class="device-icon" aria-hidden="true">🫖</span>
+                    <span class="device-name">French Press</span>
+                    <span class="device-ratio-tag">1:15</span>
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- Calculation Mode Selector -->
+              <div class="calc-field-group">
+                <span class="calc-label" id="mode-group-label">2. Базовий параметр розрахунку:</span>
+                <div class="mode-toggle-group" role="group" aria-labelledby="mode-group-label">
+                  <button type="button" id="mode-coffee" class="mode-toggle-btn active" aria-pressed="true">За вагою зерна (г)</button>
+                  <button type="button" id="mode-water" class="mode-toggle-btn" aria-pressed="false">За об'ємом води (мл)</button>
+                </div>
+              </div>
+
+              <!-- Input Group: Coffee Grams -->
+              <div class="calc-field-group" id="group-coffee">
+                <label for="calc-coffee" class="calc-label">Вага меленої кави (г):</label>
+                <div class="calc-input-row">
+                  <div class="input-number-wrap">
+                    <input 
+                      type="number" 
+                      id="calc-coffee" 
+                      class="calc-input" 
+                      value="18" 
+                      min="5" 
+                      max="100" 
+                      step="0.5" 
+                      required
+                      aria-describedby="coffee-helper"
+                      aria-label="Вага меленої кави у грамах"
+                    >
+                    <span class="input-unit">грам</span>
+                  </div>
+                </div>
+                <input 
+                  type="range" 
+                  id="calc-coffee-slider" 
+                  class="calc-slider" 
+                  min="8" 
+                  max="45" 
+                  step="0.5" 
+                  value="18" 
+                  aria-describedby="coffee-helper"
+                  aria-label="Повзунок налаштування ваги кави"
+                >
+                <p class="calc-helper" id="coffee-helper">Стандартна порція для однієї чашки: 15–18 г, для двох: 28–32 г.</p>
+              </div>
+
+              <!-- Input Group: Water Milliliters -->
+              <div class="calc-field-group" id="group-water" style="opacity: 0.7;">
+                <label for="calc-water" class="calc-label">Об'єм води (мл):</label>
+                <div class="calc-input-row">
+                  <div class="input-number-wrap">
+                    <input 
+                      type="number" 
+                      id="calc-water" 
+                      class="calc-input" 
+                      value="288" 
+                      min="80" 
+                      max="1500" 
+                      step="5" 
+                      required
+                      aria-describedby="water-helper"
+                      aria-label="Об'єм води у мілілітрах"
+                    >
+                    <span class="input-unit">мл</span>
+                  </div>
+                </div>
+                <p class="calc-helper" id="water-helper">Рекомендована мінералізація питної води: 75–120 ppm.</p>
+              </div>
+
+            </div>
+
+            <!-- Area 2: Results Display Box -->
+            <div class="calc-area-results" aria-live="polite" aria-atomic="true">
+              <div class="calc-results-card">
+                <div>
+                  <div class="results-header">
+                    <span class="results-header-title">Розраховані параметри</span>
+                    <span class="tag tag--accent" id="display-ratio">1 : 16</span>
+                  </div>
+
+                  <div class="results-main-display">
+                    <div class="result-metric">
+                      <span class="result-metric-label">Потрібно води</span>
+                      <div class="result-metric-val" id="display-water">288 <small>мл</small></div>
+                    </div>
+                    <div class="result-metric">
+                      <span class="result-metric-label">Кава (помел)</span>
+                      <div class="result-metric-val" id="display-coffee">18 <small>г</small></div>
+                    </div>
+                  </div>
+
+                  <div class="results-meta-list">
+                    <div class="result-meta-item">
+                      <span class="key">Рекомендований помел:</span>
+                      <span class="val" id="display-grind">Середній (як морська сіль)</span>
+                    </div>
+                    <div class="result-meta-item">
+                      <span class="key">Температура води:</span>
+                      <span class="val" id="display-temp">92–94 °C</span>
+                    </div>
+                    <div class="result-meta-item">
+                      <span class="key">Час екстракції:</span>
+                      <span class="val" id="display-time">2:45–3:00 хв</span>
+                    </div>
+                  </div>
+                </div>
+
+                <figure class="hero-quote" style="margin-top: var(--space-lg); font-size: var(--fs-xs);" id="display-method-desc">
+                  <blockquote>Ідеально розкриває квіткові та фруктові дескриптори, висока яскравість і прозорість.</blockquote>
+                </figure>
+              </div>
+            </div>
+
+            <!-- Area 3: Step-by-Step Pouring Schedule -->
+            <div class="calc-area-schedule">
+              <div class="schedule-table-wrap">
+                <h3 class="schedule-title">Динамічний графік проливу (Brew Schedule)</h3>
+                <p class="schedule-desc">Дотримуйтесь цих таймінгів для досягнення збалансованої екстракції (TDS ~1.25–1.40%):</p>
+
+                <ol class="schedule-steps-timeline">
+                  
+                  <li class="timeline-step">
+                    <span class="timeline-time" id="schedule-title-bloom">0:00 — Блумінг</span>
+                    <h4 class="timeline-heading">Дегазація (цвітіння)</h4>
+                    <p class="timeline-note">Рівномірно змочіть усю поверхню таблетки для вивільнення CO₂.</p>
+                    <div class="timeline-amount" id="schedule-bloom">54 мл (45 сек)</div>
+                  </li>
+
+                  <li class="timeline-step">
+                    <span class="timeline-time" id="schedule-title-pour1">0:45 — 1-й пролив</span>
+                    <h4 class="timeline-heading">Екстракція тіла &amp; солодкості</h4>
+                    <p class="timeline-note">Плавні спіральні рухи від центру до країв без торкання стінок паперу.</p>
+                    <div class="timeline-amount" id="schedule-pour1">+117 мл (до 171 мл)</div>
+                  </li>
+
+                  <li class="timeline-step">
+                    <span class="timeline-time" id="schedule-title-pour2">1:45 — 2-й пролив</span>
+                    <h4 class="timeline-heading">Фінальний пролив</h4>
+                    <p class="timeline-note">Долийте залишок води та зробіть легкий круговий рух дріпером (свірл).</p>
+                    <div class="timeline-amount" id="schedule-pour2">+117 мл (до 288 мл)</div>
+                  </li>
+
+                </ol>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Reference Recipe Cards (CSS Grid) -->
+    <section class="section" aria-labelledby="guides-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">Базові рецепти</span>
+          <h2 id="guides-heading" class="section-title">Еталонні профілі заварювання</h2>
+          <p class="section-desc">Перевірені часом рецепти від бариста та шеф-ростера KRAFT / ROAST.</p>
+        </header>
+
+        <div class="methods-grid">
+
+          <!-- 1. V60 -->
+          <article class="method-card">
+            <figure class="method-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                <line x1="6" y1="2" x2="6" y2="4"></line>
+                <line x1="10" y1="2" x2="10" y2="4"></line>
+                <line x1="14" y1="2" x2="14" y2="4"></line>
+              </svg>
+            </figure>
+            <h3 class="method-name">Hario V60</h3>
+            <p class="method-tagline">Конічний пуровер з ребрами 60°</p>
+            <div class="method-parameters">
+              <div class="param-item">
+                <span class="param-title">Пропорція:</span>
+                <span class="param-value">1:16 (15г / 240мл)</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Час:</span>
+                <span class="param-value">2:45–3:00 хв</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Температура:</span>
+                <span class="param-value">93 °C</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Помел:</span>
+                <span class="param-value">Medium-fine</span>
+              </div>
+            </div>
+            <ol class="method-steps">
+              <li class="step-item">
+                <strong>1.</strong>
+                <span>Промийте паперовий фільтр гарячою водою, щоб прибрати присмак целюлози.</span>
+              </li>
+              <li class="step-item">
+                <strong>2.</strong>
+                <span>Зробіть блумінг 45 г води на 40 секунд, обережно перемішавши ложкою.</span>
+              </li>
+              <li class="step-item">
+                <strong>3.</strong>
+                <span>Влийте воду у два рівних інтервали до 240 мл та насолоджуйтесь яскравою чашкою.</span>
+              </li>
+            </ol>
+          </article>
+
+          <!-- 2. AeroPress -->
+          <article class="method-card">
+            <figure class="method-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="3" width="14" height="18" rx="2"></rect>
+                <line x1="9" y1="7" x2="15" y2="7"></line>
+                <line x1="9" y1="12" x2="15" y2="12"></line>
+              </svg>
+            </figure>
+            <h3 class="method-name">AeroPress</h3>
+            <p class="method-tagline">Тиск та повне занурення</p>
+            <div class="method-parameters">
+              <div class="param-item">
+                <span class="param-title">Пропорція:</span>
+                <span class="param-value">1:12 (16г / 200мл)</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Час:</span>
+                <span class="param-value">1:45–2:00 хв</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Температура:</span>
+                <span class="param-value">88 °C</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Помел:</span>
+                <span class="param-value">Fine-medium</span>
+              </div>
+            </div>
+            <ol class="method-steps">
+              <li class="step-item">
+                <strong>1.</strong>
+                <span>Використовуйте інвертний (перевернутий) метод для повного контролю заварювання.</span>
+              </li>
+              <li class="step-item">
+                <strong>2.</strong>
+                <span>Залийте всю воду (200 мл) за 15 секунд і перемішайте 3 рази лопаткою.</span>
+              </li>
+              <li class="step-item">
+                <strong>3.</strong>
+                <span>Закрутіть кришку з промитим фільтром, переверніть і продавлюйте 30 секунд.</span>
+              </li>
+            </ol>
+          </article>
+
+          <!-- 3. Chemex -->
+          <article class="method-card">
+            <figure class="method-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="6 2 18 2 15 10 18 22 6 22 9 10 6 2"></polygon>
+                <line x1="8" y1="10" x2="16" y2="10"></line>
+              </svg>
+            </figure>
+            <h3 class="method-name">Chemex</h3>
+            <p class="method-tagline">Дизайнерська колба та чистий смак</p>
+            <div class="method-parameters">
+              <div class="param-item">
+                <span class="param-title">Пропорція:</span>
+                <span class="param-value">1:16.6 (30г / 500мл)</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Час:</span>
+                <span class="param-value">3:45–4:15 хв</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Температура:</span>
+                <span class="param-value">94 °C</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Помел:</span>
+                <span class="param-value">Medium-coarse</span>
+              </div>
+            </div>
+            <ol class="method-steps">
+              <li class="step-item">
+                <strong>1.</strong>
+                <span>Встановіть тришаровий бік фірмового фільтра в напрямку носика колби.</span>
+              </li>
+              <li class="step-item">
+                <strong>2.</strong>
+                <span>Блумінг 80 г води. Далі вливайте воду акуратно концентричними колами.</span>
+              </li>
+              <li class="step-item">
+                <strong>3.</strong>
+                <span>Отримайте надзвичайно чисту, схожу на чай, делікатну чашку для компанії.</span>
+              </li>
+            </ol>
+          </article>
+
+          <!-- 4. French Press -->
+          <article class="method-card">
+            <figure class="method-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="4" width="12" height="16" rx="2"></rect>
+                <line x1="12" y1="2" x2="12" y2="4"></line>
+                <line x1="9" y1="2" x2="15" y2="2"></line>
+                <line x1="6" y1="12" x2="18" y2="12"></line>
+              </svg>
+            </figure>
+            <h3 class="method-name">French Press</h3>
+            <p class="method-tagline">Глибока імерсія та щільне тіло</p>
+            <div class="method-parameters">
+              <div class="param-item">
+                <span class="param-title">Пропорція:</span>
+                <span class="param-value">1:15 (20г / 300мл)</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Час:</span>
+                <span class="param-value">4:00–4:30 хв</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Температура:</span>
+                <span class="param-value">95 °C</span>
+              </div>
+              <div class="param-item">
+                <span class="param-title">Помел:</span>
+                <span class="param-value">Coarse (крупний)</span>
+              </div>
+            </div>
+            <ol class="method-steps">
+              <li class="step-item">
+                <strong>1.</strong>
+                <span>Залийте крупно помелену каву всім об'ємом гарячої води і закрийте кришкою.</span>
+              </li>
+              <li class="step-item">
+                <strong>2.</strong>
+                <span>На 4-й хвилині зніміть верхню пінку та неперемішані частинки двома ложками.</span>
+              </li>
+              <li class="step-item">
+                <strong>3.</strong>
+                <span>Опустіть металевий фільтр до поверхні напою без стискання таблетки.</span>
+              </li>
+            </ol>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Barista Tips Section -->
+    <section class="section section--sm" aria-labelledby="tips-title" style="background-color: var(--bg-surface-subtle); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">Поради лабораторії KRAFT / ROAST</span>
+          <h2 id="tips-title" class="section-title">Три золотих правила стабільної чашки</h2>
+        </header>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl);">
+          <article style="background-color: var(--bg-surface); padding: var(--space-xl); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <h3 style="font-size: var(--fs-md); font-weight: var(--fw-semibold); margin-bottom: var(--space-xs); color: var(--accent-terracotta);">1. Вода формує 98% смаку</h3>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.6;">
+              Ніколи не використовуйте недистильовану водопровідну воду. Оптимальний вибір — ремінералізована вода з показником сухого залишку (TDS) від 75 до 120 мг/л.
+            </p>
+          </article>
+          <article style="background-color: var(--bg-surface); padding: var(--space-xl); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <h3 style="font-size: var(--fs-md); font-weight: var(--fw-semibold); margin-bottom: var(--space-xs); color: var(--accent-terracotta);">2. Ваги з таймером обов'язкові</h3>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.6;">
+              Вимірювання кави ложками або &quot;на око&quot; призводить до коливань співвідношення до 25%. Електронні ваги з точністю 0.1 г — ключ до передбачуваного результату щоранку.
+            </p>
+          </article>
+          <article style="background-color: var(--bg-surface); padding: var(--space-xl); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <h3 style="font-size: var(--fs-md); font-weight: var(--fw-semibold); margin-bottom: var(--space-xs); color: var(--accent-terracotta);">3. Свіжість помелу</h3>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.6;">
+              Меліть зерно безпосередньо перед заварюванням. Вже через 15 хвилин після подрібнення кава втрачає понад 60% летких ароматичних сполук.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer Landmark -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            KRAFT <span class="slash">/</span> ROAST
+          </div>
+          <p class="footer-tagline">
+            Локальна обсмажувальня кави класу спешелті. Працюємо з любов'ю до кожного зерна, чистоти смаку та людей, які його вирощують.
+          </p>
+        </div>
+
+        <nav class="footer-nav-col" aria-label="Навігація у підвалі">
+          <h4 class="footer-col-title">Навігація</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="beans.html">Каталог зерна</a></li>
+            <li><a href="brew-guide.html">Гайди заварювання</a></li>
+            <li><a href="index.html#philosophy">Філософія бренду</a></li>
+          </ul>
+        </nav>
+
+        <section class="footer-info-col" aria-label="Локація та години роботи">
+          <h4 class="footer-col-title">Локація &amp; Години</h4>
+          <div class="footer-info-item">
+            <strong>Адреса</strong>
+            <span>Київ, вул. Саксаганського, 42</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>Години роботи</strong>
+            <span>Пн–Пт: 08:00 – 20:00<br>Сб–Нд: 09:00 – 21:00</span>
+          </div>
+        </section>
+
+        <section class="footer-info-col" aria-label="Дні обсмажки та контакти">
+          <h4 class="footer-col-title">Дні обсмажки</h4>
+          <div class="footer-info-item">
+            <strong>Вівторок &amp; П'ятниця</strong>
+            <span>Відправляємо по Україні в день обсмаження або на наступний день після дегазації.</span>
+          </div>
+          <div class="footer-info-item" style="margin-top: var(--space-md);">
+            <strong>Контакт</strong>
+            <a href="mailto:hello@kraftroast.ua" style="color: #FFFFFF;">hello@kraftroast.ua</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 KRAFT / ROAST Specialty Coffee Roastery. Всі права захищено.</p>
+        <p>Створено з повагою до чистого веб-дизайну та ванільного коду.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
